@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "navegador navegador"
+        "encabezamiento encabezamiento"
+        "ladoizq contenido"
+        "pie pie";
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+    color: #4CAF50;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: 'Georgia', serif;
+    text-align: center;
+}
+
+
+
+.navbar-brand {
+    margin-left: 150px;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    display: inline-block;
+    width: 70px;
+}
+
+.nav-item:last-child .nav-link::after {
+    content: none;
+}
+
+.contenedor .navegador {
+    grid-area: navegador;
+    background-color: rgb(31, 243, 155);
+}
+
+.contenedor .encabezamiento {
+    grid-area: encabezamiento;
+    background-color: rgb(31, 243, 155);
+}
+
+.contenedor .ladoizq {
+    grid-area: ladoizq;
+    background-color: rgb(31, 243, 155);
+}
+
+.contenedor .contenido {
+    grid-area: contenido;
+    background-color: rgb(31, 243, 155);
+}
+
+.contenedor .pie {
+    grid-area: pie;
+    padding: 15px;
+    background-color: rgb(127, 220, 236);
+}
